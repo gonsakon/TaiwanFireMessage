@@ -9,7 +9,7 @@ app.controller('PeopleCtrl', function($scope,$http) {
   $scope.data.OutTotal = 0;
   $scope.data.GenealTotal = 0;
   $scope.data.ObservedTotal = 0;
-  $http.get('https://cdn.rawgit.com/tony1223/098e45623c73274f7ae3/raw/d278f3205f9d8a49531cc926438628103a5bc809/gistfile1.json').
+  $http.get('http://tonyq.org/kptaipei/api-20150628.php').
   success(function(data, status, headers, config) {
     $scope.data.peoples= data.data;
     $scope.UpdateTime= data.lastmodify;
@@ -35,6 +35,8 @@ app.controller('PeopleCtrl', function($scope,$http) {
   });
   $scope.nameSearch = function() {
    if ($scope.keyword.length > 1)
+     return $scope.keyword[0] + '○' + $scope.keyword.substr(2, $scope.keyword.length-2);
+   else
      return $scope.keyword;
   };
 });
