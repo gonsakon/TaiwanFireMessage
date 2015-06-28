@@ -9,7 +9,7 @@ app.controller('PeopleCtrl', function($scope,$http) {
   $scope.data.OutTotal = 0;
   $scope.data.GenealTotal = 0;
   $scope.data.ObservedTotal = 0;
-  $http.get('https://gist.githubusercontent.com/tony1223/098e45623c73274f7ae3/raw').
+  $http.get('https://cdn.rawgit.com/tony1223/098e45623c73274f7ae3/raw/d278f3205f9d8a49531cc926438628103a5bc809/gistfile1.json').
   success(function(data, status, headers, config) {
     $scope.data.peoples= data.data;
     $scope.UpdateTime= data.lastmodify;
