@@ -15,19 +15,19 @@
     <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">八仙傷者即時資訊 ( 更新時間：{{UpdateTime}}、資料來源：北市府資訊局 )</a>
+          <a class="navbar-brand" href="#">八仙傷者即時資訊</a>
         </div>
       </div>
     </nav>
 
     <div class="container">
       <div class="alert alert-info" role="alert">
-                民眾需要詢問八仙樂園受傷親友送往的醫院，新北市內請打119，其他縣市請致電（02）89512523查詢。
+                民眾需要詢問八仙樂園受傷親友送往的醫院，新北市內請打119，其他縣市請致電（02）89512523查詢。 <br>
+                更新時間：{{UpdateTime}} 資料來源：北市府資訊局
+
       </div>
-      <div class="form-group form-inline">
-        <label for="">
-          <input type="text" class="form-control ng-pristine ng-valid ng-touched" placeholder="搜尋傷患姓名" ng-model="keyword"> 
-        </label>
+      <div class="form-group ">
+          <input type="text" class="form-control ng-pristine ng-valid ng-touched" placeholder="關鍵字搜尋傷患姓名 ex:王小明" ng-model="keyword"> 
         <p class="Total"><span class="red">加護病房人數：{{data.ICUTotal}}</span>
         <span>已出院人數：{{data.OutTotal}} </span>
         <span>一般病房人數：{{data.GenealTotal}}   </span>
