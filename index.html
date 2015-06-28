@@ -10,6 +10,7 @@
 </head>
 <body ng-app="app">
   <div class="wrap" ng-controller="PeopleCtrl">
+<!--   <pre>{{data.peoples | json}}</pre> -->
     <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
@@ -22,6 +23,11 @@
         <label for="">
           <input type="text" class="form-control ng-pristine ng-valid ng-touched" placeholder="搜尋傷患姓名" ng-model="keyword"> 
         </label>
+        <p class="Total"><span class="red">加護病房人數：{{data.ICUTotal}}</span>
+        <span>已出院人數：{{data.OutTotal}} </span>
+        <span>一般病房人數：{{data.GenealTotal}}   </span>
+        <span>留院觀察人數：{{data.ObservedTotal}}</span>
+        </p>
       </div>
       <div class="row">
         <table class="table table-bordered">
@@ -45,5 +51,6 @@
       </div>
     </div>
   </div>
+
 </body>
 </html>
