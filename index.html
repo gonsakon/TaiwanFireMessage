@@ -28,7 +28,9 @@
       </div>
       <div class="form-group ">
           <input type="text" class="form-control ng-pristine ng-valid ng-touched" placeholder="關鍵字搜尋傷患姓名 ex:王小明" ng-model="keyword"> 
-        <p class="Total"><span class="red">加護病房人數：{{data.ICUTotal}}</span>
+        <p class="Total">
+        <span>受傷人數：{{data.Total}}</span>
+        <span class="red">加護病房人數：{{data.ICUTotal}}</span>
         <span>已出院人數：{{data.OutTotal}} </span>
         <span>一般病房人數：{{data.GenealTotal}}   </span>
         <span>留院觀察人數：{{data.ObservedTotal}}</span>

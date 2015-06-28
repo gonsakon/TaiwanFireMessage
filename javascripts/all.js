@@ -4,6 +4,7 @@ app.controller('PeopleCtrl', function($scope,$http) {
   $scope.keyword = '';
   $scope.data = {};
   $scope.UpdateTime = '';
+  $scope.data.Total=0;
   $scope.data.ICUTotal=0;
   $scope.data.OutTotal = 0;
   $scope.data.GenealTotal = 0;
@@ -13,12 +14,13 @@ app.controller('PeopleCtrl', function($scope,$http) {
     $scope.data.peoples= data.data;
     $scope.UpdateTime= data.lastmodify;
     var Total = $scope.data.peoples.length;
-    console.log(Total);
+    $scope.data.Total= Total;
     for(i=0;Total>i;i++){
       if($scope.data.peoples[i]['即時動向'] == '加護病房'){
         $scope.data.ICUTotal += 1;
       }
-      if($scope.data.peoples[i]['即時動向'] == '出院' || $scope.data.peoples[i]['即時動向'] == '自動出院 (AAD)'){
+      if(/出院/gi.test($scope.data.peoples[i]['即時動向'])){
+        console.log('1');
         $scope.data.OutTotal += 1;
       }
       if($scope.data.peoples[i]['即時動向'] == '一般病房'){
