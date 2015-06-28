@@ -18,7 +18,7 @@ app.controller('PeopleCtrl', function($scope,$http) {
       if($scope.data.peoples[i]['即時動向'] == '加護病房'){
         $scope.data.ICUTotal += 1;
       }
-      if($scope.data.peoples[i]['即時動向'] == '出院'){
+      if($scope.data.peoples[i]['即時動向'] == '出院' || $scope.data.peoples[i]['即時動向'] == '自動出院 (AAD)'){
         $scope.data.OutTotal += 1;
       }
       if($scope.data.peoples[i]['即時動向'] == '一般病房'){
